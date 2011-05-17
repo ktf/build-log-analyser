@@ -2,7 +2,10 @@
 
 from optparse import OptionParser
 import re
-from hashlib import md5
+try:
+  from hashlib import md5
+except ImportError:
+  from md5 import md5
 
 PAGE_HEADER="""<html><head><style>
 ul  {
